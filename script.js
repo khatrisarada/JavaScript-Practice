@@ -109,3 +109,9 @@ console.log("=>endsWith(substring)");
 const end = "JavaScript is great";
 console.log(end.endsWith("great")); 
 console.log(end.endsWith("Java")); 
+
+
+//charAt(index)
+console.log("=>charAt(index)");
+const strg = "JavaScript";
+console.log(strg.charAt(4));
