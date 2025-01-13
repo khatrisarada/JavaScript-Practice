@@ -140,3 +140,11 @@ console.log(pad.padStart(3,"0"));
 console.log("=>padEnd(targetLength, padString)");
 const padend = "5";
 console.log(padend.padEnd(3,"0"));
+
+
+
+//localeCompare(compareString)
+console.log("=>localeCompare(compareString)");
+const stre1="apple";
+const stre2="banana";
+console.log(str1.localeCompare(str2));
