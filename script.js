@@ -121,3 +121,9 @@ console.log(strg.charAt(4));
 console.log("=>charCodeAt(index)");
 const cha = "s"
 console.log(cha.charCodeAt(0));
+
+
+//repeat(count)
+console.log("=>repeat(count)");
+const rep= "hello";
+console.log(rep.repeat(2));
