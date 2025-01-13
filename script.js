@@ -90,7 +90,14 @@ console.log(ind.indexOf("Sarada"));
 console.log(ind.indexOf("sarada"));
 
 
-//lastIndexOf(substring)
+//lastIndexOf(substring) Returns the index of the last occurrence of a specified value, or -1 if not found.
 console.log("=>LastIndexOf(substring");
 const las = "sarada";
 console.log(las.lastIndexOf("a"));
+
+
+//startsWith(substring)
+console.log("=>startsWith(substring)");
+const start = "JavaScript is great";
+console.log(start.startsWith("Java"));
+console.log(start.startsWith("Script"));
