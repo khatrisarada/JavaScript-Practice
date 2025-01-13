@@ -74,3 +74,10 @@ console.log(All.replaceAll("JavaScript", "coding"));
 console.log("=>split(separator");
 const separator = "apple,banana,cherry";
 console.log(separator.split(","));
+
+
+//Includes (substring)
+console.log("=>includes (substring)");
+const include = "Sarada Khatri";
+console.log(include.includes("Khatri")); 
+console.log(include.includes("khatri"));
