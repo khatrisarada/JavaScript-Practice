@@ -255,6 +255,31 @@ let e = 5, f = 10;
 console.log(e, f);
 
 
+//generating Multiple
+console.log("generating Multiplication")
+const readline = require("readline");
+
+// Create an interface for user input
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+// Ask the user for the number
+rl.question("Enter a number to generate its multiplication table: ", (input) => {
+  const number = parseInt(input);
+
+  if (isNaN(number)) {
+    console.log("Please enter a valid number.");
+  } else {
+    console.log(`\nMultiplication Table for ${number}:\n`);
+    for (let i = 1; i <= 10; i++) {
+      console.log(`${number} x ${i} = ${number * i}`);
+    }
+  }
+
+  rl.close(); // Close the interface
+});
 
 
 
