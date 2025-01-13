@@ -242,6 +242,11 @@ c = d;
 d = temp;
 console.log(c, d); 
 
+console.log("without a Third Variable");
+let e = 5, f = 10;
+[e, f] = [f, e];
+console.log(e, f);
+
 
 
 
