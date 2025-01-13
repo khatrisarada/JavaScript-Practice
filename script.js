@@ -209,7 +209,9 @@ const old = 25;
 
 const message = "Hello, my name is " + name + ". I am " + old + " years old.";
 console.log(message);
-
+console.log("=> Template Literals");
+const msg = `Hello, my name is ${name}. I am ${old} years old.`;
+console.log(msg);
 
 
   
