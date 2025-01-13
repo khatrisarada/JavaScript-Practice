@@ -52,7 +52,13 @@ console.log(slice.slice(6));
 
 
 //substring (start,end)
-console.log("=>slice start and end");
+console.log("=>substring start and end");
 const sub = "HelloEeryone"
 console.log(sub.substring(0,5));
 console.log(sub.substring(5));
+
+
+//replace(searchValue, replaceValue)
+console.log("=>slice start and end");
+const replace = "My love to play football"
+console.log(replace.replace("football", "batminton"));
