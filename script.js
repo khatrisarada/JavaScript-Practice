@@ -50,3 +50,9 @@ const slice = "sarada khatri"
 console.log(slice.slice(0,6));
 console.log(slice.slice(6));
 
+
+//substring (start,end)
+console.log("=>slice start and end");
+const sub = "HelloEeryone"
+console.log(sub.substring(0,5));
+console.log(sub.substring(5));
