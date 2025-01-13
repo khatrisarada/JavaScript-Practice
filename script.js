@@ -233,6 +233,13 @@ y = 25;
 
 console.log(x, y, z);
 
+
+//== & === differece
+console.log("=> == & ===");
+console.log(5 == "5");
+console.log(5==="5");
+
+
 //Swapping Variable
 console.log("Swapping Variable");
 console.log("Using a Third Variable");
@@ -246,6 +253,10 @@ console.log("without a Third Variable");
 let e = 5, f = 10;
 [e, f] = [f, e];
 console.log(e, f);
+
+
+
+
 
 
 
