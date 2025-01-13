@@ -81,3 +81,10 @@ console.log("=>includes (substring)");
 const include = "Sarada Khatri";
 console.log(include.includes("Khatri")); 
 console.log(include.includes("khatri"));
+
+
+//indexOf(substring)
+console.log("=>indexOf(substring)");
+const ind = "Hello World";
+console.log(ind.indexOf("World")); 
+console.log(ind.indexOf("world"));
