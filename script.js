@@ -115,3 +115,9 @@ console.log(end.endsWith("Java"));
 console.log("=>charAt(index)");
 const strg = "JavaScript";
 console.log(strg.charAt(4));
+
+
+//charCodeAt(index)
+console.log("=>charCodeAt(index)");
+const cha = "s"
+console.log(cha.charCodeAt(0));
