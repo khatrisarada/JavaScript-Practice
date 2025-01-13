@@ -223,6 +223,20 @@ console.log(`The sum of ${a} and ${b} is ${a + b}.`);
 
 
 
+//Variable Declarations
+console.log("Variable Declrations");
+var x = 10; 
+let y = 20; 
+const z = 30; 
+x = 15;
+y = 25;
+
+console.log(x, y, z);
+
+
+
+
+
 
   
 
