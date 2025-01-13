@@ -40,5 +40,13 @@ console.log(lower.toLowerCase());
 
 //String Trim
 console.log("=>trim");
-const tri = "SARADA khatri";
+const tri = "    SARADA     khatri    ";
 console.log(tri.trim());
+
+
+//slice (start, end)
+console.log("=>slice start and end");
+const slice = "sarada khatri"
+console.log(slice.slice(0,6));
+console.log(slice.slice(6));
+
