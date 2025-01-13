@@ -127,3 +127,9 @@ console.log(cha.charCodeAt(0));
 console.log("=>repeat(count)");
 const rep= "hello";
 console.log(rep.repeat(2));
+
+
+//padStart(targetLength, padString)
+console.log("=>padStart(targetLength, padString)");
+const pad = "5";
+console.log(pad.padStart(3,"0"));
