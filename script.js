@@ -36,3 +36,9 @@ console.log(upper.toUpperCase());
 console.log("=>toUpperCase")
 const lower = "SARADA";
 console.log(lower.toLowerCase());
+
+
+//String Trim
+console.log("=>trim");
+const tri = "SARADA khatri";
+console.log(tri.trim());
