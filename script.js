@@ -101,3 +101,11 @@ console.log("=>startsWith(substring)");
 const start = "JavaScript is great";
 console.log(start.startsWith("Java"));
 console.log(start.startsWith("Script"));
+
+
+
+//endsWith(substring)
+console.log("=>endsWith(substring)");
+const end = "JavaScript is great";
+console.log(end.endsWith("great")); 
+console.log(end.endsWith("Java")); 
