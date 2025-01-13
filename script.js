@@ -214,6 +214,16 @@ const msg = `Hello, my name is ${name}. I am ${old} years old.`;
 console.log(msg);
 
 
+//Expression Interpolation
+console.log("Expression Interpolation");
+const a = 10;
+const b = 20;
+
+console.log(`The sum of ${a} and ${b} is ${a + b}.`);
+
+
+
+
   
 
 
