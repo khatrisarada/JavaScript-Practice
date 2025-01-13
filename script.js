@@ -85,6 +85,12 @@ console.log(include.includes("khatri"));
 
 //indexOf(substring)
 console.log("=>indexOf(substring)");
-const ind = "Hello World";
-console.log(ind.indexOf("World")); 
-console.log(ind.indexOf("world"));
+const ind = "Hello Sarada";
+console.log(ind.indexOf("Sarada")); 
+console.log(ind.indexOf("sarada"));
+
+
+//lastIndexOf(substring)
+console.log("=>LastIndexOf(substring");
+const las = "sarada";
+console.log(las.lastIndexOf("a"));
