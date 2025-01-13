@@ -233,6 +233,15 @@ y = 25;
 
 console.log(x, y, z);
 
+//Swapping Variable
+console.log("Swapping Variable");
+console.log("Using a Third Variable");
+let c = 5, d = 10;
+let temp = c;
+c = d;
+d = temp;
+console.log(c, d); 
+
 
 
 
