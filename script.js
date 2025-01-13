@@ -62,3 +62,15 @@ console.log(sub.substring(5));
 console.log("=>slice start and end");
 const replace = "My love to play football"
 console.log(replace.replace("football", "batminton"));
+
+
+//replaceAll (searchValue, replceValue)
+console.log("=>replaceAll (SearchValue, replaceValue");
+const All = "I love JavaScript. JavaScript is fun!";
+console.log(All.replaceAll("JavaScript", "coding"));
+
+
+//split (separator)
+console.log("=>split(separator");
+const separator = "apple,banana,cherry";
+console.log(separator.split(","));
