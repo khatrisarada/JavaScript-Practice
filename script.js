@@ -201,6 +201,17 @@ const now = new Date();
 console.log(now.toDateString()); 
 
 
+
+//String Concatenation
+console.log("=>String Concatenation");
+const name = "Alice";
+const old = 25;
+
+const message = "Hello, my name is " + name + ". I am " + old + " years old.";
+console.log(message);
+
+
+
   
 
 
