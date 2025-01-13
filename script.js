@@ -148,3 +148,60 @@ console.log("=>localeCompare(compareString)");
 const stre1="apple";
 const stre2="banana";
 console.log(str1.localeCompare(str2));
+
+
+
+//Data Type
+console.log("=>Data Type")
+let myName = "Alice";             // String
+let age = 25;                     // Number
+let isStudent = true;             // Boolean
+let hobbies = ["Reading", "Games"]; // Array
+let userInfo = { name: "Alice", age: 25 }; // Object
+let bigNum = 123456789n;          // BigInt
+let uninitialized;
+
+console.log(typeof myName);       
+console.log(typeof age);          
+console.log(typeof isStudent);   
+console.log(typeof hobbies);      
+console.log(typeof userInfo);     
+console.log(typeof bigNum); 
+console.log(uninitialized);  
+
+
+//Non-Primitive Data Type
+//Object
+console.log("=>Object")
+const user = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+  };
+  console.log(user.name); 
+
+
+//Array
+console.log("=>Array");
+const fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[1]); 
+
+
+//Function
+console.log("=>Function");
+function greet(name) {
+    return `Hello, ${name}!`;
+  }
+  console.log(greet("Alice"));
+
+
+//Date
+console.log("=>Date");
+const now = new Date();
+console.log(now.toDateString()); 
+
+
+  
+
+
+  
