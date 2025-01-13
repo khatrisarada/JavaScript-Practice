@@ -133,3 +133,10 @@ console.log(rep.repeat(2));
 console.log("=>padStart(targetLength, padString)");
 const pad = "5";
 console.log(pad.padStart(3,"0"));
+
+
+
+//padEnd(targetLength, padString)
+console.log("=>padEnd(targetLength, padString)");
+const padend = "5";
+console.log(padend.padEnd(3,"0"));
