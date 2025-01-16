@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">Hello</div>
+    <button id="click">Click</button>
+    <div id="first">Good</div>
+    <div id="first">Moorning</div>
+    <button id="clicked"> Change Color</button>
+
+    <input type="number" id="num1" placeholder="Enter Number">
+    <input type="number" id="num2" placeholder="Enter Number">
+    <div id="result"></div>
+    <button id="sum">Sum</button>
+    
+</body>
+</html>
+
+<script>
+    document.getElementById("click").addEventListener("click", () => {
+        document.getElementById("text").textContent="HlO";
+    });
+
+    document.getElementById("clicked").addEventListener("click",()=>{
+        document.getElementById("first").style.color="red";
+    });
+
+    document.getElementById("sum").addEventListener("click",()=>{
+        const num =parseFloat(document.getElementById("num1").value)
+        const num2=parseFloat(document.getElementById("num2").value)
+        const result=num+num2
+        document.getElementById("result").innerHTML = `Sum: ${result}`;
+        
+    })
+
+
+</script>

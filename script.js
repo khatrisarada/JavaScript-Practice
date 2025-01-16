@@ -1,16 +1,5 @@
 // What are some commonly used methods for manipulating strings in JavaScript? Provide examples demonstrating their usage.
 
-
-//String Methods
-
-const str = "Hello, JavaScript!";
-console.log(str.toUpperCase()); 
-console.log(str.toLowerCase()); 
-console.log(str.includes("JavaScript")); 
-console.log(str.split(", ")); 
-console.log(str.replace("JavaScript", "World")); 
-
-
 //Concatenation
 console.log("=>Concatination");
 let str1 ="Good";
@@ -286,48 +275,6 @@ rl.question("Enter a number to generate its multiplication table: ", (input) => 
 
 
 
-const readline = require("readline"); // Declare once at the top
-
-// Create an interface for user input
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-// Generate a random number between 1 and 50
-const randomNumber = Math.floor(Math.random() * 50) + 1;
-let attempts = 0;
-
-console.log("Welcome to the Number Guessing Game!");
-console.log("Guess a number between 1 and 50.\n");
-
-// Function to handle user guesses
-const askGuess = () => {
-  rl.question("Enter your guess: ", (input) => {
-    const userGuess = parseInt(input);
-    attempts++;
-
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 50) {
-      console.log("❌ Please enter a valid number between 1 and 50.");
-    } else if (userGuess === randomNumber) {
-      console.log(
-        `🎉 Congratulations! You guessed the number ${randomNumber} correctly in ${attempts} attempts!`
-      );
-      rl.close(); // End the program
-      return;
-    } else if (userGuess < randomNumber) {
-      console.log("📉 Too low! Try again.");
-    } else {
-      console.log("📈 Too high! Try again.");
-    }
-
-    // Recursive call to continue the game
-    askGuess();
-  });
-};
-
-// Start the game
-askGuess();
 
 
 

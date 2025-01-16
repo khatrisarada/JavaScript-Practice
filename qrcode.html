@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            text-align: center;
+            padding: 35px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 325px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #qrCode {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <div class="form-group">
+            <input type="text" id="userInput" placeholder="Enter text or URL">
+            <button id="generateBtn">Generate QR Code</button>
+        </div>
+        <img src="" alt="" id="qrCode">
+    </div>
+    <script>
+       const input = document.getElementById('userInput');
+       const qrimg = document.getElementById('qrCode');
+       const button = document.getElementById('generateBtn');
+       
+       document.getElementById('generateBtn').addEventListener('click',() =>{
+        const inputValue = input.value;
+
+        if(!inputValue){
+            alert("Please Enter a Valid URL");
+            return;
+        } else{
+            qrimg.src ='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputValue}';
+            qrimg.alt ='QR Code for ${inputValue}'
+        }
+       })
+    </script>
+</body>
+</html>

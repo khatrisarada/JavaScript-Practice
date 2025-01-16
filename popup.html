@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+    <style>
+        #popupbtn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            border-color: rgb(80, 162, 233);
+            cursor: pointer;
+        }
+        #popupbtn:hover {
+            background-color: rgb(111, 110, 112);
+            border-color: rgb(80, 162, 233);
+            color: white;
+        }
+        #popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(167, 160, 160);
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border-radius: 3%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button id="popupbtn">Submit</button>
+    <div id="popup">
+        <img src="cros.png" alt="close" class="close">
+        <p id="info"></p>
+    </div>
+
+    <script>
+        document.getElementById("popupbtn").addEventListener("click", () => {
+            document.getElementById("info").innerHTML = 'You are in the wrong way';
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.querySelector(".close").addEventListener("click", () => {
+            document.getElementById("popup").style.display = "none";
+        });
+    </script>
+</body>
+</html>

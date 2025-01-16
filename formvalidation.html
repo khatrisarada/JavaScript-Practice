@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        button {
+            width: 108%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #popup {
+            display: none; 
+            position: fixed;
+            top: 20%;
+            left: 70%;
+            /* left: 50%; */
+            transform: translate(-50%, -50%);
+            background-color: rgb(245, 245, 245);
+            border-color: #000000;
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border-radius: 4%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <h2>Registration Form</h2>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <small class="error-message" id="emailError"></small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <small class="error-message" id="passwordError"></small>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password">
+            <small class="error-message" id="confirmPasswordError"></small>
+        </div>
+        <button id="popupbtn" type="submit">Register</button>
+
+        <div id="popup">
+            <img src="cros.png" alt="close" class="close">
+            <p id="info"></p>
+        </div>
+    </form>
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+            let isValid = true;
+            document.querySelectorAll(".error-message").forEach((el) => (el.style.display = "none"));
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                const emailError = document.getElementById("emailError");
+                emailError.textContent = "Please enter a valid email address.";
+                emailError.style.display = "block";
+                isValid = false;
+            }
+            if (password.length < 6) {
+                const passwordError = document.getElementById("passwordError");
+                passwordError.textContent = "Password must be at least 6 characters.";
+                passwordError.style.display = "block";
+                isValid = false;
+            }
+            if (password !== confirmPassword) {
+                const confirmPasswordError = document.getElementById("confirmPasswordError");
+                confirmPasswordError.textContent = "Passwords do not match.";
+                confirmPasswordError.style.display = "block";
+                isValid = false;
+            }
+
+            if (isValid) {
+                
+                document.getElementById("popupbtn").addEventListener("click", () => {
+            document.getElementById("info").innerHTML = 'sucessfully Register';
+            document.getElementById("popup").style.color="black";
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.querySelector(".close").addEventListener("click", () => {
+            document.getElementById("popup").style.display = "none";
+        });
+                console.log("Email:", email);
+                console.log("Password:", password);
+            }
+        });
+        
+
+    </script>
+</body>
+</html>
